@@ -2,7 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const requiredFiles = ["index.html", "styles.css", "script.js"];
+const requiredFiles = [
+  "index.html",
+  "styles.css",
+  "script.js",
+  "assets/aravind-jegadesan-profile.png",
+  "assets/Aravind-Jegadesan-Resume.pdf",
+];
 const missing = requiredFiles.filter((file) => !fs.existsSync(path.join(root, file)));
 
 if (missing.length) {
@@ -15,15 +21,22 @@ const js = fs.readFileSync(path.join(root, "script.js"), "utf8");
 
 const htmlChecks = [
   "Aravind Jegadesan",
-  "Senior Software Engineer",
+  "Lead Backend Engineer",
   "10+ years",
-  "Backend",
+  "Open to:",
+  "Staff-level IC",
+  "Backend Architect",
+  "Forward Deployed Engineer",
+  "telecom",
   "Java",
   "Spring Boot",
   "Temporal",
   "Kubernetes",
   "CI/CD",
-  "Professional Experience",
+  "Leadership Value",
+  "Engineering Outcomes",
+  "Technical Foundation",
+  "Experience",
   "Oportun",
   "Societe Generale",
   "Accenture",
@@ -31,6 +44,11 @@ const htmlChecks = [
   "Chainsys",
   "aravindjegadesan@gmail.com",
   "linkedin.com/in/aravind-jegadesan-11ba6269",
+  "assets/aravind-jegadesan-profile.png",
+  "assets/Aravind-Jegadesan-Resume.pdf",
+  "Remote / Hybrid",
+  "Full-time",
+  "Onsite - 5 days office",
 ];
 
 const missingHtml = htmlChecks.filter((text) => !html.includes(text));
@@ -38,11 +56,11 @@ if (missingHtml.length) {
   throw new Error(`index.html is missing required content: ${missingHtml.join(", ")}`);
 }
 
-if (!html.includes('href="styles.css"')) {
+if (!html.includes('href="styles.css')) {
   throw new Error("index.html must link styles.css");
 }
 
-if (!html.includes('src="script.js"')) {
+if (!html.includes('src="script.js')) {
   throw new Error("index.html must load script.js");
 }
 
@@ -50,8 +68,12 @@ if (!css.includes("@media") || !css.includes(":focus-visible")) {
   throw new Error("styles.css must include responsive and focus-visible styling");
 }
 
-if (!js.includes("IntersectionObserver") || !js.includes("copyEmail")) {
-  throw new Error("script.js must include reveal behavior and copyEmail handling");
+if (!html.includes("data-tooltip") || !html.includes("nav-icon") || !css.includes(".profile-photo")) {
+  throw new Error("Portfolio must include icon navigation, tooltips, and profile photo styling");
+}
+
+if (!js.includes("copyEmail") || !js.includes("setActiveNav") || !js.includes("updateActiveNav")) {
+  throw new Error("script.js must include copyEmail handling and dynamic nav state");
 }
 
 console.log("Portfolio verification passed.");

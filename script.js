@@ -38,3 +38,41 @@ if (copyEmail) {
     }, 1800);
   });
 }
+
+const navLinks = Array.from(document.querySelectorAll(".nav a[href^='#']"));
+const navSections = navLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+const setActiveNav = (id) => {
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+  });
+};
+
+const updateActiveNav = () => {
+  if (!navSections.length) return;
+
+  const scrollMarker = window.scrollY + window.innerHeight * 0.78;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const nearPageEnd = window.scrollY >= maxScroll - 8;
+  let activeSection = navSections[0];
+
+  if (nearPageEnd) {
+    activeSection = navSections[navSections.length - 1];
+  } else {
+    navSections.forEach((section) => {
+      if (section.offsetTop <= scrollMarker) {
+        activeSection = section;
+      }
+    });
+  }
+
+  setActiveNav(activeSection.id);
+};
+
+if (navSections.length) {
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+  window.addEventListener("resize", updateActiveNav);
+}
