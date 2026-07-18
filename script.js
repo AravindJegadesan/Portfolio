@@ -46,23 +46,30 @@ const navSections = navLinks
 
 const setActiveNav = (id) => {
   navLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+    const isActive = link.getAttribute("href") === `#${id}`;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
 };
 
 const updateActiveNav = () => {
   if (!navSections.length) return;
 
-  const scrollMarker = window.scrollY + window.innerHeight * 0.78;
+  const scrollMarker = window.scrollY + window.innerHeight * 0.42;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const nearPageEnd = window.scrollY >= maxScroll - 8;
+  const nearPageEnd = window.scrollY >= maxScroll - 24;
   let activeSection = navSections[0];
 
   if (nearPageEnd) {
     activeSection = navSections[navSections.length - 1];
   } else {
     navSections.forEach((section) => {
-      if (section.offsetTop <= scrollMarker) {
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      if (sectionTop <= scrollMarker) {
         activeSection = section;
       }
     });
