@@ -7,6 +7,7 @@ from reportlab.platypus import (
     HRFlowable,
     Paragraph,
     SimpleDocTemplate,
+    Spacer,
 )
 
 
@@ -55,79 +56,79 @@ def build():
         "Title",
         parent=styles["Title"],
         fontName="Helvetica-Bold",
-        fontSize=21.3,
-        leading=23.2,
+        fontSize=23.5,
+        leading=25.2,
         textColor=colors.HexColor("#111827"),
         alignment=TA_LEFT,
-        spaceAfter=1,
+        spaceAfter=1.5,
     )
     headline = ParagraphStyle(
         "Headline",
         parent=styles["Normal"],
         fontName="Helvetica-Bold",
-        fontSize=9.5,
-        leading=10.8,
+        fontSize=10.2,
+        leading=11.8,
         textColor=colors.HexColor("#12355b"),
-        spaceAfter=2.2,
+        spaceAfter=3,
     )
     contact = ParagraphStyle(
         "Contact",
         parent=styles["Normal"],
         fontName="Helvetica",
-        fontSize=7.45,
-        leading=8.55,
+        fontSize=8.05,
+        leading=9.35,
         textColor=colors.HexColor("#4b5563"),
-        spaceAfter=3,
+        spaceAfter=4,
     )
     target = ParagraphStyle(
         "Target",
         parent=styles["Normal"],
         fontName="Helvetica-Bold",
-        fontSize=7.55,
-        leading=8.7,
+        fontSize=8.05,
+        leading=9.35,
         textColor=colors.HexColor("#243447"),
         backColor=colors.HexColor("#f4f7fb"),
-        borderPadding=(2.5, 4, 2.5, 4),
-        spaceAfter=4,
+        borderPadding=(3, 5, 3, 5),
+        spaceAfter=5,
     )
     section = ParagraphStyle(
         "Section",
         parent=styles["Heading2"],
         fontName="Helvetica-Bold",
-        fontSize=8.7,
-        leading=9.6,
+        fontSize=9.4,
+        leading=10.6,
         textColor=colors.HexColor("#12355b"),
-        spaceBefore=5,
-        spaceAfter=1.2,
+        spaceBefore=6.4,
+        spaceAfter=1.8,
         uppercase=True,
     )
     body = ParagraphStyle(
         "Body",
         parent=styles["Normal"],
         fontName="Helvetica",
-        fontSize=7.35,
-        leading=8.4,
+        fontSize=8.05,
+        leading=9.55,
         textColor=colors.HexColor("#1f2937"),
-        spaceAfter=1.8,
+        spaceAfter=2.8,
     )
     role = ParagraphStyle(
         "Role",
         parent=styles["Normal"],
         fontName="Helvetica-Bold",
-        fontSize=8.05,
-        leading=9.05,
+        fontSize=8.75,
+        leading=10.1,
         textColor=colors.HexColor("#111827"),
-        spaceBefore=2.6,
-        spaceAfter=0.6,
+        spaceBefore=4,
+        spaceAfter=1.1,
     )
     meta = ParagraphStyle(
         "Meta",
         parent=styles["Normal"],
         fontName="Helvetica",
-        fontSize=6.95,
-        leading=7.95,
+        fontSize=7.45,
+        leading=8.6,
         textColor=colors.HexColor("#6b7280"),
-        spaceAfter=1,
+        spaceAfter=1.8,
     )
 
     story = []
@@ -141,11 +142,11 @@ def build():
         )
     )
     story.append(p("Target roles: Lead Backend Engineer | Staff-level IC | Backend Architect | Forward Deployed Engineer", target))
-    story.append(HRFlowable(width="100%", thickness=0.75, color=colors.HexColor("#12355b"), spaceAfter=4))
+    story.append(HRFlowable(width="100%", thickness=0.75, color=colors.HexColor("#12355b"), spaceAfter=5.4))
 
     def section_heading(text):
         story.append(p(text, section))
-        story.append(HRFlowable(width="100%", thickness=0.45, color=colors.HexColor("#c8a24a"), spaceAfter=2.6))
+        story.append(HRFlowable(width="100%", thickness=0.45, color=colors.HexColor("#c8a24a"), spaceAfter=3.4))
 
     section_heading("Professional Summary")
     story.append(
@@ -245,6 +246,7 @@ def build():
 
     section_heading("Education")
     story.append(p("B.Tech in Computer Science and Engineering - B.S. Abdur Rahman University, Chennai | 2012 - 2016", body))
+    story.append(Spacer(1, 8))
 
     doc.build(story, onFirstPage=draw_background, onLaterPages=draw_background)
 
