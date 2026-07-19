@@ -616,25 +616,20 @@ h3 {
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  gap: 14px;
 }
 
 .architecture-map::before {
-  position: absolute;
-  top: 30px;
-  left: 8%;
-  right: 8%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--blue), #5f9ee7, var(--green));
-  content: "";
-  opacity: 0.35;
+  display: none;
 }
 
 .arch-node {
   position: relative;
   z-index: 1;
-  min-height: 220px;
-  padding: 14px;
+  min-height: 178px;
+  display: grid;
+  align-content: start;
+  padding: 18px 16px 16px;
   color: inherit;
   font: inherit;
   text-align: left;
@@ -657,26 +652,37 @@ h3 {
 
 .arch-node span {
   display: inline-flex;
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   border: 1px solid var(--blue-soft);
   border-radius: 999px;
   background: #eff6ff;
   color: var(--blue);
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
 .arch-node strong {
   display: block;
+  min-height: 42px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.28;
+}
+
+.arch-node p {
+  max-width: 180px;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .arch-detail {
   grid-column: 1 / -1;
-  padding: 16px;
+  margin-top: 2px;
+  padding: 18px;
   border: 1px solid #bfdbfe;
   border-radius: var(--radius);
   background: linear-gradient(135deg, #eff6ff, #ffffff);
@@ -971,12 +977,19 @@ h3 {
   }
 
   .architecture-map::before {
-    top: 8%;
-    bottom: 8%;
-    left: 30px;
-    right: auto;
-    width: 2px;
-    height: auto;
+    display: none;
+  }
+
+  .arch-node {
+    min-height: 0;
+  }
+
+  .arch-node strong {
+    min-height: 0;
+  }
+
+  .arch-node p {
+    max-width: none;
   }
 }
 
