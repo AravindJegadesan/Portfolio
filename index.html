@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Enterprise portfolio of Aravind Jegadesan, Senior Backend Engineer with 10+ years of experience in Java, Spring Boot, distributed systems, Temporal, Kubernetes, CI/CD, and financial platforms."
+      content="Portfolio of Aravind Jegadesan, Senior Software Engineer with 10+ years of backend engineering experience across telecom, fintech, and financial services."
     >
     <meta name="theme-color" content="#f6f8fa">
     <title>Aravind Jegadesan | Senior Software Engineer</title>
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=nav-active-20260718">
+    <link rel="stylesheet" href="styles.css?v=portfolio-upgrade-local">
   </head>
   <body>
     <header class="site-header">
@@ -33,32 +33,42 @@
         </span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#roles" class="is-active" data-tooltip="Target roles and leadership fit" aria-label="Roles">
+        <a href="#snapshot" class="is-active" data-tooltip="Recruiter snapshot">
           <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 7V6a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v1"></path>
-            <path d="M4 7h16v12H4z"></path>
-            <path d="M4 12h16"></path>
+            <path d="M4 5h16v14H4z"></path>
+            <path d="M8 9h8"></path>
+            <path d="M8 13h5"></path>
           </svg>
-          <span>Roles</span>
+          <span>Snapshot</span>
         </a>
-        <a href="#outcomes" data-tooltip="Measured engineering outcomes" aria-label="Engineering outcomes">
+        <a href="#case-studies" data-tooltip="Selected case studies">
           <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 19V5"></path>
             <path d="M4 19h16"></path>
             <path d="m7 15 4-4 3 3 5-7"></path>
           </svg>
-          <span>Outcomes</span>
+          <span>Cases</span>
         </a>
-        <a href="#experience" data-tooltip="Professional experience and scope" aria-label="Experience">
+        <a href="#architecture" data-tooltip="Backend architecture view">
           <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 6h16"></path>
-            <path d="M4 12h16"></path>
-            <path d="M4 18h16"></path>
-            <path d="M8 6v12"></path>
+            <path d="M4 7h5v5H4z"></path>
+            <path d="M15 4h5v5h-5z"></path>
+            <path d="M15 15h5v5h-5z"></path>
+            <path d="M9 9.5h6"></path>
+            <path d="M12 9.5V17h3"></path>
+          </svg>
+          <span>Architecture</span>
+        </a>
+        <a href="#experience" data-tooltip="Career impact timeline">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 4v16"></path>
+            <path d="M10 6h10"></path>
+            <path d="M10 12h10"></path>
+            <path d="M10 18h10"></path>
           </svg>
           <span>Experience</span>
         </a>
-        <a href="#contact" data-tooltip="Contact, LinkedIn, and resume" aria-label="Contact">
+        <a href="#contact" data-tooltip="Contact and resume">
           <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 5h16v14H4z"></path>
             <path d="m4 7 8 6 8-6"></path>
@@ -69,27 +79,38 @@
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero" id="snapshot">
         <div class="section-shell hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Open to: Lead Backend Engineer | Staff-level IC | Backend Architect | Forward Deployed Engineer</p>
-            <h1>Senior Software Engineer building reliable enterprise backend systems.</h1>
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Senior Software Engineer | 10+ years | Telecom, fintech, financial services</p>
+            <h1>Senior Software Engineer specializing in Java backend systems and enterprise delivery.</h1>
             <p class="hero-text">
-              I help engineering organizations design reliable Java services,
-              build distributed workflows, improve delivery systems, and work
-              close to business teams across telecom, fintech, and financial services
-              where correctness, uptime, and execution matter.
+              I build Java and Spring Boot backend systems, distributed workflows,
+              data-intensive services, and CI/CD practices for teams where reliability,
+              correctness, and delivery quality matter.
             </p>
+            <div class="role-strip" aria-label="Target roles">
+              <button type="button" class="role-pill is-active" data-role="lead">Lead Backend Engineer</button>
+              <button type="button" class="role-pill" data-role="staff">Staff-level IC</button>
+              <button type="button" class="role-pill" data-role="architect">Backend Architect</button>
+              <button type="button" class="role-pill" data-role="fde">Forward Deployed Engineer</button>
+            </div>
+            <div class="role-focus" aria-live="polite">
+              <span id="roleFocusLabel">Role focus</span>
+              <strong id="roleFocusTitle">Lead Backend Engineer</strong>
+              <p id="roleFocusText">
+                Strong fit for teams that need hands-on backend ownership,
+                delivery discipline, mentoring, and reliable Java/Spring Boot
+                execution across business-critical systems.
+              </p>
+            </div>
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="button button-primary" href="#contact">Contact Aravind</a>
-              <a class="button button-secondary" href="#roles">View Role Fit</a>
-              <a class="button button-quiet" href="assets/Aravind-Jegadesan-Resume.pdf" target="_blank" rel="noreferrer">
-                Download Resume
-              </a>
+              <a class="button button-primary" href="mailto:aravindjegadesan@gmail.com">Email Aravind</a>
+              <a class="button button-secondary" href="https://linkedin.com/in/aravind-jegadesan-11ba6269" target="_blank" rel="noreferrer">View LinkedIn</a>
             </div>
           </div>
 
-          <aside class="profile-panel" aria-label="Professional snapshot">
+          <aside class="profile-panel reveal" aria-label="Recruiter snapshot">
             <div class="profile-head">
               <img
                 class="profile-photo"
@@ -105,202 +126,268 @@
             </div>
             <div class="availability">
               <span class="status-dot" aria-hidden="true"></span>
-              Chennai, India - Remote / Hybrid / Full-time
+              Chennai, India | Remote / Hybrid | Full-time
             </div>
             <dl class="snapshot-list">
               <div>
                 <dt>10+ years</dt>
-                <dd>Backend systems ownership across telecom, fintech, and financial services</dd>
+                <dd>Backend ownership across regulated enterprise products</dd>
               </div>
               <div>
-                <dt>45% improvement</dt>
-                <dd>Release speed and reliability through CI/CD automation</dd>
+                <dt>45%</dt>
+                <dd>Release speed and reliability improvement through CI/CD</dd>
               </div>
               <div>
-                <dt>Architecture depth</dt>
-                <dd>Distributed workflows, event-driven systems, reliability, and data performance</dd>
+                <dt>30%</dt>
+                <dd>Backend performance improvement through refactoring and indexing</dd>
               </div>
             </dl>
           </aside>
         </div>
       </section>
 
-      <section class="section-shell signal-bar" id="roles" aria-label="Target roles">
-        <div>
-          <span>Target Roles</span>
-          <strong>Lead Backend Engineer, Staff-level IC, Backend Architect, Forward Deployed Engineer</strong>
+      <section class="section-shell recruiter-grid" aria-label="Recruiter fit">
+        <article class="recruiter-card reveal">
+          <span>Current Role</span>
+          <strong>Senior Software Engineer at Oportun</strong>
+          <p>Remote fintech engineering with backend reliability, CI/CD, workflow orchestration, and risk-data systems.</p>
+        </article>
+        <article class="recruiter-card reveal">
+          <span>Work Model</span>
+          <strong>Open to remote and hybrid roles</strong>
+          <p>Full-time opportunities aligned with backend leadership, staff-level IC, architecture, and forward deployed engineering.</p>
+        </article>
+        <article class="recruiter-card reveal">
+          <span>Domain Fit</span>
+          <strong>Telecom, fintech, financial services</strong>
+          <p>Experience with enterprise platforms where auditability, uptime, data correctness, and delivery discipline matter.</p>
+        </article>
+      </section>
+
+      <section class="section-shell case-section" id="case-studies">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">Case Studies</p>
+          <h2>Selected work that shows senior engineering judgment, not just tool usage.</h2>
         </div>
-        <div>
-          <span>IC Leadership</span>
-          <strong>Architecture reviews, technical direction, mentoring, delivery quality</strong>
-        </div>
-        <div>
-          <span>System Scope</span>
-          <strong>Java services, distributed workflows, telecom systems, fintech risk systems, data pipelines</strong>
+        <div class="case-grid">
+          <article class="case-card reveal" data-case="cicd">
+            <div class="case-topline">
+              <span>Release Engineering</span>
+              <strong>45% improvement</strong>
+            </div>
+            <h3>CI/CD modernization for faster, safer releases</h3>
+            <p>
+              Improved release speed and deployment reliability by implementing
+              GitHub Actions pipelines, strengthening automation, and reducing
+              manual release steps.
+            </p>
+            <dl>
+              <div><dt>Role</dt><dd>Hands-on backend engineer driving delivery maturity</dd></div>
+              <div><dt>Stack</dt><dd>GitHub Actions, CI/CD, Java services, release workflows</dd></div>
+              <div><dt>Outcome</dt><dd>Higher deployment confidence and faster release cycles</dd></div>
+            </dl>
+            <button class="text-button" type="button" data-open-case="cicd">View deep dive</button>
+          </article>
+
+          <article class="case-card reveal" data-case="workflow">
+            <div class="case-topline">
+              <span>Distributed Systems</span>
+              <strong>Workflow orchestration</strong>
+            </div>
+            <h3>Temporal-based backend orchestration</h3>
+            <p>
+              Designed backend workflows with retries, clearer state transitions,
+              and operational traceability for multi-step fintech processes.
+            </p>
+            <dl>
+              <div><dt>Role</dt><dd>Workflow design, implementation, resilience patterns</dd></div>
+              <div><dt>Stack</dt><dd>Temporal, Java, Spring Boot, backend integrations</dd></div>
+              <div><dt>Outcome</dt><dd>More visible and reliable long-running operations</dd></div>
+            </dl>
+            <button class="text-button" type="button" data-open-case="workflow">View deep dive</button>
+          </article>
+
+          <article class="case-card reveal" data-case="risk">
+            <div class="case-topline">
+              <span>Financial Data</span>
+              <strong>30% performance gain</strong>
+            </div>
+            <h3>Performance and ingestion improvements for risk systems</h3>
+            <p>
+              Built SEM ingestion pipelines and improved backend performance
+              through refactoring, query optimization, and database indexing.
+            </p>
+            <dl>
+              <div><dt>Role</dt><dd>Backend implementation, data flow reliability, performance tuning</dd></div>
+              <div><dt>Stack</dt><dd>Java, Spring Boot, Oracle SQL, indexing, ingestion flows</dd></div>
+              <div><dt>Outcome</dt><dd>Better throughput, correctness, and production readiness</dd></div>
+            </dl>
+            <button class="text-button" type="button" data-open-case="risk">View deep dive</button>
+          </article>
         </div>
       </section>
 
-      <section class="section-shell split-section" id="value">
-        <div class="section-heading">
-          <p class="eyebrow">Leadership Value</p>
-          <h2>What I bring as a senior backend engineer ready for larger technical ownership.</h2>
+      <section class="section-shell architecture-section" id="architecture">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Architecture Visual</p>
+          <h2>How I think about enterprise backend systems.</h2>
           <p>
-            Top teams need engineers who can move beyond ticket execution:
-            clarify ambiguous problems, make architecture tradeoffs, guide
-            implementation quality, and improve how systems are built and operated.
+            The pattern I bring to teams is simple: clarify the business flow,
+            design reliable service boundaries, make data movement observable,
+            and improve delivery confidence around the system.
           </p>
         </div>
-        <div class="value-grid">
-          <article class="value-card">
+        <div class="architecture-map reveal" aria-label="Backend architecture flow">
+          <button class="arch-node is-active" type="button" data-arch="api">
             <span>01</span>
-            <h3>Technical Direction</h3>
-            <p>
-              Translate business-critical backend needs into pragmatic service
-              boundaries, workflow design, integration patterns, and delivery plans.
-            </p>
-          </article>
-          <article class="value-card">
+            <strong>API Layer</strong>
+            <p>Java, Spring Boot, REST contracts, validation, service boundaries</p>
+          </button>
+          <button class="arch-node" type="button" data-arch="workflow">
             <span>02</span>
-            <h3>Architecture And Scale</h3>
-            <p>
-              Design Java/Spring Boot services, Temporal workflows, event-driven
-              systems, and data-heavy services for reliability and maintainability.
-            </p>
-          </article>
-          <article class="value-card">
+            <strong>Workflow Orchestration</strong>
+            <p>Temporal, retries, state transitions, long-running operations</p>
+          </button>
+          <button class="arch-node" type="button" data-arch="data">
             <span>03</span>
-            <h3>Engineering Maturity</h3>
-            <p>
-              Improve CI/CD, observability, code review quality, deployment
-              confidence, and production support practices across teams.
-            </p>
-          </article>
-          <article class="value-card">
+            <strong>Data Processing</strong>
+            <p>Batch flows, ingestion pipelines, SEM/risk data movement</p>
+          </button>
+          <button class="arch-node" type="button" data-arch="persistence">
             <span>04</span>
-            <h3>Hands-on Execution</h3>
-            <p>
-              Stay close to implementation: APIs, database performance, orchestration,
-              resilience, debugging, and measurable production outcomes.
+            <strong>Persistence</strong>
+            <p>Oracle SQL, PostgreSQL, indexing, query optimization</p>
+          </button>
+          <button class="arch-node" type="button" data-arch="delivery">
+            <span>05</span>
+            <strong>Delivery & Observability</strong>
+            <p>CI/CD, monitoring, logging, zero-downtime release practices</p>
+          </button>
+          <aside class="arch-detail" aria-live="polite">
+            <span id="archDetailLabel">Selected architecture area</span>
+            <h3 id="archDetailTitle">API Layer</h3>
+            <p id="archDetailText">
+              Build clear Java/Spring Boot service contracts with validation,
+              error handling, maintainable service boundaries, and production-friendly APIs.
             </p>
-          </article>
+            <strong id="archDetailImpact">Impact: clearer ownership and safer backend change.</strong>
+          </aside>
         </div>
       </section>
 
-      <section class="section-shell proof-section" id="outcomes">
-        <div class="section-heading compact">
-          <p class="eyebrow">Engineering Outcomes</p>
-          <h2>Practical backend improvements delivered across enterprise systems.</h2>
-        </div>
-        <div class="impact-table" role="list">
-          <article role="listitem">
-            <span>Release Engineering</span>
-            <h3>Improved release speed and reliability by 45%</h3>
-            <p>Improved deployment confidence and team throughput by maturing CI/CD automation and release practices.</p>
-          </article>
-          <article role="listitem">
-            <span>Distributed Systems</span>
-            <h3>Designed Temporal workflows for backend orchestration</h3>
-            <p>Structured multi-step operations with clearer state handling, retries, operational visibility, and resilience.</p>
-          </article>
-          <article role="listitem">
-            <span>Financial Platforms</span>
-            <h3>Improved backend module performance by 30%</h3>
-            <p>Refactored service bottlenecks and optimized database access paths for high-volume transaction systems.</p>
-          </article>
-          <article role="listitem">
-            <span>Risk Data</span>
-            <h3>Built ingestion pipelines for fraud and risk detection</h3>
-            <p>Delivered data movement patterns where correctness, traceability, and processing timeliness are critical.</p>
-          </article>
+      <section class="section-shell resume-section" id="resume">
+        <div class="resume-card reveal">
+          <div>
+            <p class="eyebrow">Resume</p>
+            <h2>Concise career summary with backend engineering impact and enterprise delivery experience.</h2>
+            <p>
+              A focused resume covering current role, technical strengths,
+              domain experience, and measurable outcomes across telecom,
+              fintech, and financial services.
+            </p>
+          </div>
+          <div class="resume-actions">
+            <button class="button button-primary" type="button" data-open-resume>View Resume</button>
+            <button class="button button-secondary" type="button" id="downloadResume">Download Resume</button>
+          </div>
         </div>
       </section>
 
-      <section class="section-shell stack-section">
-        <div class="section-heading compact">
-          <p class="eyebrow">Technical Foundation</p>
-          <h2>Technical foundation for backend leadership, architecture, and forward deployed engineering roles.</h2>
+      <section class="section-shell skills-section" id="skills">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">Skills Matrix</p>
+          <h2>Technical depth grouped the way senior hiring teams evaluate it.</h2>
         </div>
-        <div class="stack-groups">
-          <div>
-            <h3>Backend</h3>
-            <p>Java, Spring Boot, Spring Batch, Hibernate, REST APIs, design patterns</p>
-          </div>
-          <div>
-            <h3>Cloud & Delivery</h3>
-            <p>Docker, Kubernetes, GitHub Actions, Jenkins, CI/CD, zero-downtime deployments</p>
-          </div>
-          <div>
-            <h3>Data</h3>
-            <p>Oracle SQL, PostgreSQL, MySQL, indexing, query optimization, data modeling</p>
-          </div>
-          <div>
-            <h3>Architecture</h3>
-            <p>Temporal, distributed systems, event-driven architecture, observability, scalability tuning</p>
-          </div>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Backend Engineering</h3>
+            <p>Java, Spring Boot, Spring Batch, Hibernate, REST APIs, design patterns, service reliability</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Distributed Systems</h3>
+            <p>Temporal workflows, event-driven design, retries, fault tolerance, service boundaries</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Data & Databases</h3>
+            <p>Oracle SQL, PostgreSQL, MySQL, indexing, query optimization, data modeling, stored procedures</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Cloud & CI/CD</h3>
+            <p>Docker, Kubernetes, GitHub Actions, Jenkins, deployment automation, monitoring, release quality</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Domains</h3>
+            <p>Telecom, fintech risk systems, financial transaction systems, enterprise integrations</p>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Engineering Leadership</h3>
+            <p>Architecture reviews, mentoring, code quality, production support, stakeholder alignment</p>
+          </article>
         </div>
       </section>
 
       <section class="section-shell experience-section" id="experience">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>Enterprise backend experience across telecom, fintech, and financial services.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Impact Timeline</p>
+          <h2>Backend engineering experience across product, finance, and enterprise delivery teams.</h2>
         </div>
         <div class="timeline">
-          <article>
+          <article class="reveal">
             <time>Dec 2024 - Present</time>
             <div>
               <h3>Senior Software Engineer - Oportun</h3>
               <p class="work-mode">Chennai, India | Remote</p>
               <p>
-                Own backend reliability, CI/CD maturity, Temporal orchestration,
-                SEM ingestion pipelines, and production readiness for fintech risk systems.
-                Role focus: staff-level execution, distributed workflow design, and release quality.
+                Backend reliability, CI/CD maturity, Temporal orchestration, SEM
+                ingestion pipelines, integrations, and production readiness for
+                fintech risk systems.
               </p>
             </div>
           </article>
-          <article>
+          <article class="reveal">
             <time>Mar 2022 - Dec 2024</time>
             <div>
               <h3>Specialist Software Engineer - Societe Generale</h3>
               <p class="work-mode">Chennai, India | Hybrid</p>
               <p>
-                Delivered scalable modules for financial transaction systems,
-                improved performance, supported architecture reviews, and raised
-                Spring Boot and CI/CD engineering practices across teams.
+                Delivered scalable backend modules for financial transaction
+                systems, improved performance, supported architecture reviews,
+                and strengthened Spring Boot and CI/CD practices.
               </p>
             </div>
           </article>
-          <article>
+          <article class="reveal">
             <time>Sep 2019 - Mar 2022</time>
             <div>
               <h3>Application Development Specialist - Accenture</h3>
               <p class="work-mode">Chennai, India | Onsite - 5 days office</p>
               <p>
-                Built enterprise-grade APIs with Spring Boot, Hibernate, and Oracle
-                SQL while improving monitoring, error handling, and service stability.
+                Built enterprise-grade APIs with Spring Boot, Hibernate, and
+                Oracle SQL while improving monitoring, error handling, and stable
+                backend delivery.
               </p>
             </div>
           </article>
-          <article>
+          <article class="reveal">
             <time>Jan 2019 - Sep 2019</time>
             <div>
               <h3>Senior System Engineer - Infosys</h3>
               <p class="work-mode">Chennai, India | Onsite - 5 days office</p>
               <p>
-                Built cloud-compatible Java modules, automated deployment tasks,
-                and optimized multithreaded services and database queries.
+                Built Java backend modules, automated deployment tasks, and
+                optimized multithreaded services and database queries.
               </p>
             </div>
           </article>
-          <article>
+          <article class="reveal">
             <time>Jun 2016 - Jan 2019</time>
             <div>
               <h3>Programmer - Chainsys</h3>
               <p class="work-mode">Chennai, India | Onsite - 5 days office</p>
               <p>
-                Developed Java backend workflows, data pipelines, stored procedures,
-                triggers, indexing patterns, and production fixes for high-volume
-                database-backed enterprise applications.
+                Developed Java backend workflows, data pipelines, stored
+                procedures, triggers, indexing patterns, and production fixes for
+                high-volume database-backed enterprise applications.
               </p>
             </div>
           </article>
@@ -308,37 +395,82 @@
       </section>
 
       <section class="section-shell contact-section" id="contact">
-        <div>
+        <div class="reveal">
           <p class="eyebrow">Contact</p>
-          <h2>Available for lead backend, staff-level IC, architect, and forward deployed engineering roles.</h2>
+          <h2>Let’s connect about backend systems, platform reliability, and enterprise delivery work.</h2>
           <p>
-            Best fit: teams building telecom, fintech, and financial services products,
-            workflow systems, data ingestion, customer-facing integrations, and cloud-native Java services.
-            Available for remote, hybrid, and full-time work models.
+            Best fit: teams building telecom, fintech, financial services,
+            workflow systems, data ingestion, customer-facing integrations, and
+            cloud-native Java services.
           </p>
         </div>
-        <div class="contact-card">
-          <a class="button button-primary" href="mailto:aravindjegadesan@gmail.com">aravindjegadesan@gmail.com</a>
-          <button class="button button-secondary" type="button" id="copyEmail" data-email="aravindjegadesan@gmail.com">
-            Copy Email
-          </button>
-          <a
-            class="button button-secondary"
-            href="https://linkedin.com/in/aravind-jegadesan-11ba6269"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View LinkedIn
-          </a>
+        <div class="contact-card reveal">
+          <a class="button button-primary" href="mailto:aravindjegadesan@gmail.com">Email Aravind</a>
+          <button class="button button-secondary" type="button" id="copyEmail" data-email="aravindjegadesan@gmail.com">Copy Email</button>
         </div>
       </section>
     </main>
 
+    <div class="resume-modal" id="resumeModal" aria-hidden="true">
+      <div class="resume-backdrop" data-close-resume></div>
+      <section class="resume-dialog" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+        <header>
+          <div>
+            <p class="eyebrow">Resume Preview</p>
+            <h2 id="resumeTitle">Aravind Jegadesan - Senior Software Engineer</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-resume aria-label="Close resume preview">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </header>
+        <iframe title="Aravind Jegadesan resume" src="assets/Aravind-Jegadesan-Resume.pdf"></iframe>
+      </section>
+    </div>
+
+    <div class="case-modal" id="caseModal" aria-hidden="true">
+      <div class="resume-backdrop" data-close-case></div>
+      <section class="case-dialog" role="dialog" aria-modal="true" aria-labelledby="caseModalTitle">
+        <header>
+          <div>
+            <p class="eyebrow" id="caseModalCategory">Case Study</p>
+            <h2 id="caseModalTitle">Engineering deep dive</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-case aria-label="Close case study">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </header>
+        <div class="case-dialog-body">
+          <article>
+            <span>Problem</span>
+            <p id="caseProblem"></p>
+          </article>
+          <article>
+            <span>Action</span>
+            <p id="caseAction"></p>
+          </article>
+          <article>
+            <span>Result</span>
+            <p id="caseResult"></p>
+          </article>
+          <article>
+            <span>Technologies</span>
+            <p id="caseTech"></p>
+          </article>
+        </div>
+      </section>
+    </div>
+
     <footer class="site-footer">
       <span>Aravind Jegadesan</span>
-      <span>B.Tech Computer Science and Engineering - B.S. Abdur Rahman University</span>
+      <span>Senior Software Engineer | Java | Spring Boot | Enterprise Backend Systems</span>
     </footer>
 
-    <script src="script.js?v=nav-active-20260718"></script>
+    <script src="script.js?v=download-force-20260719"></script>
   </body>
 </html>

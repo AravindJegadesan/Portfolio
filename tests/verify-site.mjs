@@ -23,7 +23,7 @@ const htmlChecks = [
   "Aravind Jegadesan",
   "Lead Backend Engineer",
   "10+ years",
-  "Open to:",
+  "Open to remote and hybrid roles",
   "Staff-level IC",
   "Backend Architect",
   "Forward Deployed Engineer",
@@ -33,9 +33,10 @@ const htmlChecks = [
   "Temporal",
   "Kubernetes",
   "CI/CD",
-  "Leadership Value",
-  "Engineering Outcomes",
-  "Technical Foundation",
+  "Case Studies",
+  "Architecture Visual",
+  "Skills Matrix",
+  "Resume Preview",
   "Experience",
   "Oportun",
   "Societe Generale",
@@ -74,6 +75,10 @@ if (!html.includes("data-tooltip") || !html.includes("nav-icon") || !css.include
 
 if (!js.includes("copyEmail") || !js.includes("setActiveNav") || !js.includes("updateActiveNav")) {
   throw new Error("script.js must include copyEmail handling and dynamic nav state");
+}
+
+if (!js.includes("openResume")) {
+  throw new Error("script.js must include resume preview handling");
 }
 
 console.log("Portfolio verification passed.");
